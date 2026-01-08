@@ -1,0 +1,50 @@
+/* public/css/style.css */
+
+/* 1. Base Font Settings */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Custom Scrollbar (Clean & Minimal) */
+/* This makes the scrollbar less distracting on desktop browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9; /* Matches Tailwind slate-100 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* Matches Tailwind slate-300 */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; /* Matches Tailwind slate-400 */
+}
+
+/* 3. Text Truncation Utility */
+/* Ensures descriptions don't make cards uneven sizes */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 4. Card Hover Effect (Subtle Lift) */
+/* Adds a smooth lift effect when hovering over note cards */
+.hover\:shadow-md:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* 5. Mobile Tweaks */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
